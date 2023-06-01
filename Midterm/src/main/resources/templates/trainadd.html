@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Train Details </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('t1.png'); /* Replace with your background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+			background-position:center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 50%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6); /* Transparent white */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="time"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: 1;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<br>
+
+<body>
+    <div class="container">
+        <h1 align="center">Adding Train </h1>
+        <form th:action="@{/savetrainForm}" th:object="${train1}" method="post"> 
+         
+         <div class="form-group">
+                <label for="trainId">Train Id</label>
+                <input type="number" th:field="*{trainId}" name="trainId" placeholder="Enter Train Id" required>
+            </div>
+         
+            
+            <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" th:field="*{train_name}" name="trainName" placeholder="Enter Train Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="source">Source</label>
+                <input type="text" th:field="*{source}" name="source" placeholder="Enter Source" required>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" th:field="*{destination}" name="destination" placeholder="Enter Destination" required>
+            </div>
+
+            <div class="form-group">
+                <label for="arrivalTime">Arrival Time</label>
+                <input type="time" th:field="*{arrival_time}" name="arrivalTime" required>
+            </div>
+
+            <div class="form-group">
+                <label for="departureTime">Departure Time</label>
+                <input type="time" th:field="*{depature_time}" name="departureTime" required>
+           </div>
+		   <div class="form-group">
+            <label for="fare">Fare</label>
+            <input type="number" th:field="*{fare}" name="fare" placeholder="Enter Fare" required>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
+ 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Your Page Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style>
+    body{
+      background-image:url('cover1.jpg');
+      background-repeat:no-repeat;
+      background-size:cover;
+      margin:0;
+      padding:0;
+      opacity:1;
+     
+      align-items:center;
+      justify-content:space-between;
+    }
+  
+    header {
+      background-color:rgba(0,0,0,0.5);
+      padding: 20px;
+      color: #fff;
+    }
+  
+    h1 {
+      margin: 0;
+    }
+  
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav li {
+      display: inline;
+      margin-right: 10px;
+    }
+  
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      cellpadding:2px;
+      cellspacing:0px;
+    }
+  
+    #searchForm {
+      margin-top: 20px;
+    }
+  
+    #searchForm input[type="text"] {
+      padding: 5px;
+      width: 200px;
+    }
+  
+    #searchForm input[type="submit"] {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  
+    #searchForm input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  
+    #searchResults {
+      margin-top: 20px;
+    }
+  
+    #searchResults table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    #searchResults th, #searchResults td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+   .conn{
+   margin-top:20%;
+   margin-left:40%;
+   }
+   .conn a{
+   margin-right:4%;
+   padding:10px;
+   }
+  </style>
+  
+</head>
+<body>
+<div class="conn">
+<a class="btn btn-primary"  th:href="@{/adminLogin}">Admin Login</a>
+<a class="btn btn-success" th:href="@{/login}">User Login</a>
+</div>
+</body>
+</html>
